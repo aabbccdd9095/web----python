@@ -1,0 +1,1132 @@
+<!DOCTYPE html><html><head>
+      <title>安装</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/cynthia/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.20/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="web应用开发python"><strong>《WEB应用开发（python）》</strong> </h1>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#web应用开发python" class="md-toc-link">
+            <p><strong>《WEB应用开发（python）》</strong></p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1-初识flask" class="md-toc-link"><p>1 初识Flask</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#开发环境搭建" class="md-toc-link"><p>开发环境搭建</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pdm安装" class="md-toc-link">
+            <p>pdm安装</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#环境初始化" class="md-toc-link">
+            <p>环境初始化</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#下载安装ide" class="md-toc-link">
+            <p>下载安装IDE</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#创建程序实例" class="md-toc-link"><p>创建程序实例</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#注册路由" class="md-toc-link">
+            <p>注册路由</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#开发服务器-werkzeug" class="md-toc-link">
+            <p>开发服务器 Werkzeug</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#使用pycharm运行服务器" class="md-toc-link">
+            <p>使用pycharm运行服务器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#flask-shell" class="md-toc-link">
+            <p>Flask Shell</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#项目配置" class="md-toc-link">
+            <p>项目配置</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#视图-url-端点" class="md-toc-link">
+            <p>视图、url、端点</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#flask命令" class="md-toc-link">
+            <p>Flask命令</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2-flask与http" class="md-toc-link"><p>2 Flask与Http</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#http请求" class="md-toc-link"><p>http请求</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#url的组成部分" class="md-toc-link">
+            <p>url的组成部分</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#请求报文" class="md-toc-link">
+            <p>请求报文</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#request对象提供的属性" class="md-toc-link">
+            <p>request对象提供的属性</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#request对象常用属性-方法" class="md-toc-link">
+            <p>request对象常用属性、方法</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#url传入参数的方法" class="md-toc-link">
+            <p>url传入参数的方法</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#设置监听http方法" class="md-toc-link">
+            <p>设置监听http方法</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#url处理" class="md-toc-link">
+            <p>url处理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#请求钩子" class="md-toc-link">
+            <p>请求钩子</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#http响应" class="md-toc-link"><p>http响应</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#http响应报文" class="md-toc-link">
+            <p>http响应报文</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#http常见状态码" class="md-toc-link">
+            <p>http常见状态码</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#response对象" class="md-toc-link"><p>response对象</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#生成响应对象" class="md-toc-link">
+            <p>生成响应对象</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#重定向" class="md-toc-link">
+            <p>重定向</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#生成错误响应" class="md-toc-link">
+            <p>生成错误响应</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#设置响应格式" class="md-toc-link">
+            <p>设置响应格式</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#session与cookie" class="md-toc-link"><p>session与cookie</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#set_cookie" class="md-toc-link">
+            <p>set_cookie()</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#session" class="md-toc-link">
+            <p>session</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#flask上下文" class="md-toc-link"><p>flask上下文</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#上下文全局变量" class="md-toc-link">
+            <p>上下文全局变量</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#推送上下文" class="md-toc-link"><p>推送上下文</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#手动激活上下文" class="md-toc-link">
+            <p>手动激活上下文</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#上下文钩子" class="md-toc-link">
+            <p>上下文钩子</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#web安全防范" class="md-toc-link"><p>web安全防范</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#注入攻击" class="md-toc-link">
+            <p>注入攻击</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#xss攻击" class="md-toc-link">
+            <p>xss攻击</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#csrf攻击" class="md-toc-link">
+            <p>csrf攻击</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#小实践重定向到上一个页面" class="md-toc-link">
+            <p>小实践：重定向到上一个页面</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#3-模版与静态文件" class="md-toc-link">
+            <p>3 模版与静态文件</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#附录1pdm常用指令" class="md-toc-link">
+            <p>附录1：pdm常用指令</p>
+
+          </a></div>
+</div>
+<h1 id="1-初识flask">1 初识Flask </h1>
+<blockquote>
+<p>Flask 是一个使用 Python 编写的轻量级 Web 框架，其核心设计 philosophy 是“微内核”与高度灵活，仅提供路由和模板等最基础的功能，将数据库、表单等高级特性交由强大的第三方扩展生态实现，因此非常适合快速构建小型项目或微服务 。</p>
+<p>与 Django 这种“全家桶”式框架和主打高性能异步 API 的 FastAPI 相比，Flask 在保留核心简洁的同时提供了极致的灵活性，让开发者可以像吃“自助餐”一样自由选择和组合所需的组件 ；</p>
+</blockquote>
+<h2 id="开发环境搭建">开发环境搭建 </h2>
+<h3 id="pdm安装">pdm安装 </h3>
+<p>参考 <a href="https://pdm-project.org/en/stable">pdm官方文档</a></p>
+<p>Linux/Mac</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>$curl -sSL https://pdm-project.org/install-pdm.py | python3 -
+</code></pre><p>Windows</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>powershell -ExecutionPolicy ByPass -c "irm https://pdm-project.org/install-pdm.py | py -"
+</code></pre><p>验证安装成功<br>
+<code>$pdm --version</code></p>
+<h3 id="环境初始化">环境初始化 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>$mkdir pdm-test
+$cd pdm-test
+$pdm init
+</code></pre><p><img src="./statics/Screenshot%202026-02-25%20at%208.06.30%E2%80%AFPM.png" alt="命令行交互"></p>
+<p>pyproject.toml文件<br>
+<img src="./statics/Screenshot%202026-02-25%20at%208.55.25%E2%80%AFPM.png" alt="toml文件"></p>
+<p>安装依赖<br>
+<code>$pdm add flask</code></p>
+<p>Flask的核心依赖</p>
+<blockquote>
+<ol>
+<li><strong>Werkzeug</strong>	WSGI 工具集，是 Flask 的“发动机”。它负责处理路由、请求和响应对象的封装、以及调试服务，是框架最核心的部分。</li>
+<li><strong>Jinja2</strong>	模板引擎，是 Flask 的“显示层”。它让你能在 HTML 文件中使用动态数据和逻辑（如循环、判断），最终渲染出完整的网页。</li>
+<li><strong>MarkupSafe</strong>	伴随 Jinja2 工作，负责转义不可信输入，防止模板注入攻击，保障应用安全。</li>
+<li><strong>ItsDangerous</strong>	负责安全地签名数据，用于保证数据完整性，最典型的应用就是保护 Flask 的会话（session）cookie。</li>
+<li><strong>Click</strong>	一个命令行框架，用于编写命令行应用。它支撑起了 flask 命令，让你可以方便地运行开发服务器、管理数据库等。</li>
+</ol>
+</blockquote>
+<h3 id="下载安装ide">下载安装IDE </h3>
+<p><a href="https://www.jetbrains.com/pycharm/download/?section=windows">Pycharm官网</a></p>
+<h3 id="创建程序实例">创建程序实例 </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> flask <span class="token keyword keyword-import">import</span> Flask
+
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token comment">#注册路由启动启动</span>
+
+<span class="token comment">#视图函数</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string">'&lt;h1&gt;Hello,World!&lt;/h1&gt;'</span>
+
+</code></pre><p>启动服务器<br>
+<code>$pdm run flask run </code></p>
+<p>关闭服务器<br>
+<code>ctrl/cmd + c</code></p>
+<h4 id="注册路由">注册路由 </h4>
+<blockquote>
+<ul>
+<li>
+<p><strong>URI</strong>（统一资源标识符）它用于唯一标识某个资源，但不一定要告诉你怎么找到它；URL是URI的一种，不仅标识资源，还提供了访问该资源的网络位置和方式。</p>
+</li>
+<li>
+<p><strong>URL</strong>（统一资源定位符）指定了互联网上某个资源（比如网页、图片、视频）的位置和访问方式，相当于每个网站或文件在网上的“门牌号”。</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>客户端与服务器交互过程</strong><br>
+<img src="./statics/deepseek_mermaid_20260227_b3d461.png" alt="交互过程"></p>
+<blockquote>
+<p>1.用户输入网址 → 浏览器发起请求<br>
+2.DNS解析 → 把域名（如 <a href="http://google.com">google.com</a>）转成 IP 地址<br>
+3.发送HTTP请求 → 浏览器向服务器要东西<br>
+4.服务器处理 → 运行代码（如Flask路由）、查询数据库<br>
+5.返回HTTP响应 → 服务器把结果（HTML/JSON）发回<br>
+6.浏览器渲染 → 解析HTML、CSS、JS，显示网页</p>
+</blockquote>
+<p>装饰器<br>
+<code>@app.route() #负责管理url与函数之间的映射</code></p>
+<ol>
+<li>绑定多个url</li>
+</ol>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/ping"</span><span class="token punctuation">)</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/pong"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">double</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span><span class="token string">"&lt;p&gt;hello ping and pong!&lt;/p&gt;"</span>
+<span class="token comment">#打开浏览器分别输入两个url，查看绑定结果。</span>
+</code></pre><ol>
+<li>动态url</li>
+</ol>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/hello/&lt;name&gt;"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">hello</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f"&lt;p&gt;hello </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!&lt;/p&gt;"</span></span>
+
+<span class="token comment">#为name设置默认值</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/hello/defaults={'name':'human'}"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">hello</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f"&lt;p&gt;hello </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!&lt;/p&gt;"</span></span>
+</code></pre><h3 id="开发服务器-werkzeug">开发服务器 Werkzeug </h3>
+<blockquote>
+<p><strong>WSGI</strong> 是 Web Server Gateway Interface（Web 服务器网关接口）的缩写，它是 Python 中定义的一种规范或协议，用于解耦 Web 服务器和 Web 应用，让它们能够相互通信。</p>
+</blockquote>
+<ol>
+<li>程序自动发现机制</li>
+</ol>
+<blockquote>
+<ul>
+<li>从执行命令当前目录中寻找<strong>app.py</strong> 或者 <strong>wsgi.py</strong>模块，或在app或wsgi包的构造文件中寻找名为app或application的程序实例，或寻找名为create_app或make_app的程序实例创建函数。</li>
+<li>从命令行参数 --app或系统环境变量FLASK_APP对应的模块名或导入路径中寻找名为<strong>app/application</strong>的程序实例，或名为create_app/make_app的程序实例创建函数。</li>
+</ul>
+</blockquote>
+<p>示例</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>$ flask run --app=hello run #指定app名称
+$ export FLASK_APP = hello #设置环境变量
+如何实例名称不是app或applicaiton 则需要显式指定FLASK_APP=hello:myapp
+</code></pre><div style="background-color: #fff6b5ff; padding: 5px; border-left: 5px solid #f7dc14ff; border-radius: 5px;">
+  <strong>💡 TIPS</strong>
+  <p>推荐大家将单脚本程序命名为app.py，程序实例命名为app或application。</p>
+</div>
+<ol start="2">
+<li>
+<p>调试模式<br>
+<code>$ flask run --debug</code><br>
+2.1 调试器<br>
+<img src="./statics/Screenshot%202026-02-27%20at%2010.39.43%E2%80%AFPM.png" alt="调试器"><br>
+2.2 重载器<br>
+内置重载器stat<br>
+或用于检测文件变动的python库watchdog<code>$pdm add --dev watchdog</code></p>
+</li>
+<li>
+<p>服务器对外可见<br>
+<code>$ flask run --host=0.0.0.0</code></p>
+</li>
+<li>
+<p>改变默认端口<br>
+<code>$flask run --port=8000</code></p>
+</li>
+</ol>
+<h3 id="使用pycharm运行服务器">使用pycharm运行服务器 </h3>
+<p><img src="./statics/Screenshot%202026-02-27%20at%2010.59.31%E2%80%AFPM.png" alt="run configuration"></p>
+<h3 id="flask-shell">Flask Shell </h3>
+<p>启动 python shell <code>$ flask shell</code></p>
+<h3 id="项目配置">项目配置 </h3>
+<p><strong>配置变量</strong>：Flask类的config属性 <code>app.config</code>或<code>app.config.update()</code>方法<br>
+示例：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>app.config['ADMIN_NAME'] = 'Peter'
+或
+app.config.update(ADMIN_NAME = 'Peter')
+</code></pre><h2 id="视图-url-端点">视图、url、端点 </h2>
+<p>避免写死url，Flask提供<code>url_for()</code>函数生成url。在调用时，传入的第一个参数为<strong>视图（view）<strong>的</strong>端点（endpoint）</strong>。</p>
+<p>示例：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/hello/&lt;name&gt;"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">hello</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"human"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+     <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f"&lt;p&gt;hello </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!&lt;/p&gt;"</span></span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/getname'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">getUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    url <span class="token operator">=</span> url_for<span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">,</span>name<span class="token operator">=</span><span class="token string">"from_server"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string">"&lt;p&gt;get url:{url}&lt;/p&gt;"</span>
+</code></pre><p>一个url只对应一个视图函数。<br>
+尝试以下代码看看：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/pong"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span><span class="token string">"&lt;p&gt;first!&lt;/p&gt;"</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/pong"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">second</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span><span class="token string">"&lt;p&gt;second!&lt;/p&gt;"</span>
+</code></pre><p>打印所有路由信息<br>
+<code>$ flask routes</code></p>
+<h2 id="flask命令">Flask命令 </h2>
+<blockquote>
+<p>Flask通过依赖包Click内置了一个CLI系统。例如，flask run。</p>
+</blockquote>
+<p>自定义命令</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> click
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>cli<span class="token punctuation">.</span>command</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">echo_ping</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    click<span class="token punctuation">.</span>echo<span class="token punctuation">(</span><span class="token string">"pong"</span><span class="token punctuation">)</span>
+
+</code></pre><p>Terminal<br>
+<code>$ flask echo_ping</code></p>
+<h1 id="2-flask与http">2 Flask与Http </h1>
+<p><strong>请求-响应循环</strong><br>
+<img src="./statics/deepseek_mermaid_20260228_394159.png" alt="请求响应循环"><br>
+<strong>具体工作流程</strong><br>
+<img src="./statics/deepseek_mermaid_20260228_2644ce.png" alt="flask-web程序工作流程"></p>
+<h2 id="http请求">http请求 </h2>
+<h3 id="url的组成部分">url的组成部分 </h3>
+<p>以这个url为例，<code>https://helloflask.com/hello?name=grey</code></p>
+<table>
+<thead>
+<tr>
+<th>https://</th>
+<th>为协议字符串，指定了传输协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://helloflask.com">helloflask.com</a></td>
+<td>为服务器的主机名（域名）</td>
+</tr>
+<tr>
+<td>hello？name=grey</td>
+<td>要获取的资源路径（path）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="请求报文">请求报文 </h3>
+<pre data-role="codeBlock" data-info="http" class="language-http http"><code><span class="token request-line"><span class="token method property">GET</span> <span class="token request-target url">/hello?name=grey</span> <span class="token http-version property">HTTP/1.1</span></span>
+<span class="token header"><span class="token header-name keyword">Host</span><span class="token punctuation">:</span> <span class="token header-value">helloflask.com</span></span>
+<span class="token header"><span class="token header-name keyword">User-Agent</span><span class="token punctuation">:</span> <span class="token header-value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36</span></span>
+<span class="token header"><span class="token header-name keyword">Accept</span><span class="token punctuation">:</span> <span class="token header-value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</span></span>
+<span class="token header"><span class="token header-name keyword">Accept-Language</span><span class="token punctuation">:</span> <span class="token header-value">zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3</span></span>
+<span class="token header"><span class="token header-name keyword">Accept-Encoding</span><span class="token punctuation">:</span> <span class="token header-value">gzip, deflate</span></span>
+<span class="token header"><span class="token header-name keyword">Connection</span><span class="token punctuation">:</span> <span class="token header-value">keep-alive</span></span>
+<span class="token header"><span class="token header-name keyword">Upgrade-Insecure-Requests</span><span class="token punctuation">:</span> <span class="token header-value">1</span></span>
+（空行）
+（请求体）
+</code></pre><table>
+<thead>
+<tr>
+<th>组成说明</th>
+<th>请求报文内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>请求行</td>
+<td>GET /hello?name=grey HTTP/1.1</td>
+</tr>
+<tr>
+<td>请求头</td>
+<td>第二行到空行前</td>
+</tr>
+<tr>
+<td>请求体</td>
+<td>get方法一般为空，如果post表单则为表单</td>
+</tr>
+</tbody>
+</table>
+<h3>常见的http方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">GET</td>
+<td style="text-align:center">获取资源</td>
+</tr>
+<tr>
+<td style="text-align:center">POST</td>
+<td style="text-align:center">创建或更新资源</td>
+</tr>
+<tr>
+<td style="text-align:center">PUT</td>
+<td style="text-align:center">创建或替换资源</td>
+</tr>
+<tr>
+<td style="text-align:center">DELETE</td>
+<td style="text-align:center">删除资源</td>
+</tr>
+</tbody>
+</table>
+<h2>request对象</h2>
+<blockquote>
+<p>Flask 提供的request对象，请求解析和响应封装实际上由Werkzeug完成的，Flask子类化了Werkzeug的request和respond对象，并添加了特定功能。</p>
+</blockquote>
+<h3 id="request对象提供的属性">request对象提供的属性 </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/request'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">req</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    path <span class="token operator">=</span> request<span class="token punctuation">.</span>path
+    full_path <span class="token operator">=</span> request<span class="token punctuation">.</span>full_path
+    host <span class="token operator">=</span> request<span class="token punctuation">.</span>host
+    host_url <span class="token operator">=</span> request<span class="token punctuation">.</span>host_url
+    base_url <span class="token operator">=</span> request<span class="token punctuation">.</span>base_url
+    url <span class="token operator">=</span> request<span class="token punctuation">.</span>url
+    url_root <span class="token operator">=</span> request<span class="token punctuation">.</span>url_root
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span>full_path<span class="token punctuation">,</span>host<span class="token punctuation">,</span>host_url<span class="token punctuation">,</span>base_url<span class="token punctuation">,</span>url<span class="token punctuation">,</span>url_root<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">200</span>
+
+</code></pre><h3 id="request对象常用属性-方法">request对象常用属性、方法 </h3>
+<table>
+<thead>
+<tr>
+<th>属性/方法</th>
+<th>类型</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request.method</td>
+<td>字符串</td>
+<td>HTTP 请求方法（GET/POST/PUT 等）</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>request.args</td>
+<td>ImmutableMultiDict</td>
+<td>URL 查询参数（即 ?key=value 部分）</td>
+<td>request.args.get('name')</td>
+</tr>
+<tr>
+<td>request.form</td>
+<td>ImmutableMultiDict</td>
+<td>表单数据（POST 表单，enctype=application/x-www-form-urlencoded）</td>
+<td>request.form['username']</td>
+</tr>
+<tr>
+<td>request.values</td>
+<td>CombinedMultiDict</td>
+<td>args + form 合并（先找 args，再找 form）</td>
+<td>request.values.get('key')</td>
+</tr>
+<tr>
+<td>request.json</td>
+<td>字典/列表</td>
+<td>JSON 数据（POST 的 application/json 请求体）</td>
+<td>request.json.get('key')</td>
+</tr>
+<tr>
+<td>request.data</td>
+<td>字节串</td>
+<td>原始请求体（当无法解析为表单或 JSON 时）</td>
+<td>request.data.decode('utf-8')</td>
+</tr>
+<tr>
+<td>request.files</td>
+<td>ImmutableMultiDict</td>
+<td>上传的文件（enctype=multipart/form-data）</td>
+<td>request.files['avatar']</td>
+</tr>
+<tr>
+<td>request.cookies</td>
+<td>字典</td>
+<td>请求中的 Cookies</td>
+<td>request.cookies.get('session_id')</td>
+</tr>
+<tr>
+<td>request.endpoint</td>
+<td>字符串</td>
+<td>请求对应的端点名（即视图函数名）</td>
+<td>'index'</td>
+</tr>
+<tr>
+<td>request.query_string</td>
+<td>字节串</td>
+<td>原始查询字符串</td>
+<td>b'x=1&amp;y=2'</td>
+</tr>
+<tr>
+<td>request.is_json</td>
+<td>布尔值</td>
+<td>请求体是否为 JSON</td>
+<td>if request.is_json:</td>
+</tr>
+<tr>
+<td>request.get_json()</td>
+<td>方法</td>
+<td>解析 JSON 数据（与 json 类似，但可设参数）</td>
+<td>request.get_json(silent=True)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Werkzeug的MultiDict类是字典的子类，主要处理同一个key对应多个value的情况。可以通过getlist()方法来获取文件对象列表。</p>
+</blockquote>
+<h3 id="url传入参数的方法">url传入参数的方法 </h3>
+<blockquote>
+<ul>
+<li>?key=value 例如，?name = grey</li>
+<li>路径参数 例如，hello/grey<br>
+<strong>获取url中的查询字符串</strong></li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> flask <span class="token keyword keyword-import">import</span> Flask<span class="token punctuation">,</span> request
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/hello'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+   name <span class="token operator">=</span>request<span class="token punctuation">.</span>args<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'human'</span><span class="token punctuation">)</span>
+   <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f'&lt;h1&gt;hello,</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!&lt;/h1&gt;'</span></span>
+<span class="token comment">#输入 http://localhost:5000/hello?name=grey 进行验证</span>
+</code></pre><div style="background-color: #fff6b5ff; padding: 5px; border-left: 5px solid #f7dc14ff; border-radius: 5px;">
+  <strong>⚠️注意</strong>
+  <p>当我们从request对象的类型为 MultiDict,ImmutableMultiDict属性中直接将key作为索引获取数据时，【如，request.args['name']】，如果没有对应的key，会返回http 400错误响应。</p>
+</div>
+<p>验证</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/none'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">none</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> request<span class="token punctuation">.</span>args<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string">'&lt;h1&gt;not found.&lt;/h1&gt;'</span>
+</code></pre><h2 id="设置监听http方法">设置监听http方法 </h2>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/watch'</span><span class="token punctuation">,</span>methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">,</span><span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">watch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-if">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'GET'</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> <span class="token string">'处理get方法'</span>
+    <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> <span class="token string">'处理post方法'</span>
+</code></pre><p>快捷路由装饰器</p>
+<blockquote>
+<p>-app.get<br>
+-app.post<br>
+-app.delete<br>
+-app.put</p>
+</blockquote>
+<h2 id="url处理">url处理 </h2>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/goback/&lt;int:year&gt;'</span><span class="token punctuation">)</span> <span class="token comment">#&lt;转换器：变量名&gt;将year转换为整型</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">goback</span><span class="token punctuation">(</span>year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f'welcome to </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token number">2026</span><span class="token operator">-</span>year<span class="token punctuation">}</span></span><span class="token string">!'</span></span>
+</code></pre><p>flask内置变量转换型</p>
+<blockquote>
+<p>-string<br>
+-int<br>
+-float<br>
+-path<br>
+-any<br>
+-uuid</p>
+</blockquote>
+<p>any的用法</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/colors/&lt;any:(blue,green,red):color&gt;)'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">color</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f'&lt;h3&gt;</span><span class="token interpolation"><span class="token punctuation">{</span>color<span class="token punctuation">}</span></span><span class="token string">&lt;/h3&gt;'</span></span>
+<span class="token comment">#输入除了blue，gree，red意外的词进行验证</span>
+</code></pre><h2 id="请求钩子">请求钩子 </h2>
+<blockquote>
+<p>请求钩子/回调函数 帮助我们对请求进行预处理或后处理。</p>
+</blockquote>
+<p>钩子执行顺序<br>
+<img src="./statics/deepseek_mermaid_20260228_b3679c.png" alt="回调执行顺序"><br>
+<strong>钩子的应用</strong></p>
+<blockquote>
+<ul>
+<li>before_request :与数据库建立连接,记录某些用户数据</li>
+<li>after_request:进行数据库操作<br>
+-teardown-request:关闭数据库连接</li>
+</ul>
+</blockquote>
+<p>示例</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>before_request</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">do_something</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'do something before each request'</span><span class="token punctuation">)</span>
+</code></pre><h2 id="http响应">http响应 </h2>
+<h3 id="http响应报文">http响应报文 </h3>
+<pre data-role="codeBlock" data-info="http" class="language-http http"><code><span class="token response-status"><span class="token http-version property">HTTP/1.1</span> <span class="token status-code number">200</span> <span class="token reason-phrase string">OK #状态行</span></span>
+<span class="token header"><span class="token header-name keyword">Content-Type</span><span class="token punctuation">:</span> <span class="token header-value">text/html; charset=utf-8 #响应体（直到空行前）</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">username=admin; Path=/; HttpOnly</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">theme=dark; Max-Age=3600</span></span>
+<span class="token header"><span class="token header-name keyword">Content-Length</span><span class="token punctuation">:</span> <span class="token header-value">56</span></span>
+<span class="token header"><span class="token header-name keyword">Server</span><span class="token punctuation">:</span> <span class="token header-value">Werkzeug/2.3.0</span></span>
+<span class="token header"><span class="token header-name keyword">Date</span><span class="token punctuation">:</span> <span class="token header-value">Mon, 01 Mar 2026 10:30:25 GMT</span></span>
+（空行）
+&lt;h1&gt;登录成功&lt;/h1&gt; #响应体
+&lt;p&gt;欢迎回来，admin！&lt;/p&gt;
+</code></pre><h3 id="http常见状态码">http常见状态码 </h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>状态码</th>
+<th>原因语句</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成功</td>
+<td>200</td>
+<td>OK</td>
+<td>请求被正常处理</td>
+</tr>
+<tr>
+<td>重定向</td>
+<td>301</td>
+<td>Moved Permanently</td>
+<td>永久重定向</td>
+</tr>
+<tr>
+<td>客户端错误</td>
+<td>404</td>
+<td>Not Found</td>
+<td>服务器上无法找到请求的资源或url无效</td>
+</tr>
+<tr>
+<td>服务器错误</td>
+<td>500</td>
+<td>Internet Server Error</td>
+<td>服务器内部发生错误</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response对象">response对象 </h3>
+<blockquote>
+<p>大多数情况下，我们只负责返回主题内容，而响应报文中的大部分由服务器处理。视图函数返回可以返回最多由三个元素组成的元组：响应主体、状态码、首部字段</p>
+</blockquote>
+<h4 id="生成响应对象">生成响应对象 </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/response'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">test_response</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span><span class="token string">'&lt;h1&gt;make response&lt;/h1&gt;'</span><span class="token punctuation">,</span><span class="token number">201</span>
+
+<span class="token comment">#重定向302</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/redirect'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">test_redirect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string">''</span><span class="token punctuation">,</span><span class="token number">302</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'Location'</span><span class="token punctuation">:</span><span class="token string">'http://localhost'</span><span class="token punctuation">}</span> <span class="token comment">#响应体 状态码 响应头</span>
+    
+</code></pre><p><strong>手动生成响应对象</strong></p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> flask <span class="token keyword keyword-import">import</span> make_response
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/response'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">test_response</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> make_response<span class="token punctuation">(</span><span class="token string">'&lt;h1&gt;make response&lt;/h1&gt;'</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> response
+</code></pre><p><strong>response类常用的属性和方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td>str</td>
+<td>HTTP状态码及描述</td>
+<td>response.status = '200 OK'</td>
+</tr>
+<tr>
+<td>status_code</td>
+<td>int</td>
+<td>HTTP状态码数字</td>
+<td>response.status_code = 404</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>dict-like</td>
+<td>响应头字典</td>
+<td>response.headers['Content-Type'] = 'application/json'</td>
+</tr>
+<tr>
+<td>content_type</td>
+<td>str</td>
+<td>内容类型（快捷方式）</td>
+<td>response.content_type = 'text/html'</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>参数</th>
+<th>返回值</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set_cookie()</td>
+<td>key, value, **options</td>
+<td>None</td>
+<td>设置Cookie</td>
+<td>response.set_cookie('username', 'admin', max_age=3600)</td>
+</tr>
+<tr>
+<td>delete_cookie()</td>
+<td>key, path='/', domain=None</td>
+<td>None</td>
+<td>删除Cookie</td>
+<td>response.delete_cookie('username')</td>
+</tr>
+<tr>
+<td>set_data()</td>
+<td>value</td>
+<td>None</td>
+<td>设置响应体数据</td>
+<td>response.set_data('<h1>新内容</h1>')</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> flask <span class="token keyword keyword-import">import</span> make_response
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/redirect'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">test_redirect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> make_response<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    response<span class="token punctuation">.</span>status_code <span class="token operator">=</span> <span class="token number">302</span>
+    response<span class="token punctuation">.</span>location <span class="token operator">=</span> <span class="token string">'http://localhost'</span>
+    <span class="token keyword keyword-return">return</span> response
+</code></pre><h4 id="重定向">重定向 </h4>
+<p><img src="./statics/deepseek_mermaid_20260301_589b22.png" alt="重定向流程"></p>
+<p><strong>redirect()函数</strong></p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/redirect2'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">func_redirect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> redirect<span class="token punctuation">(</span><span class="token string">'http://localhost'</span><span class="token punctuation">)</span> <span class="token comment">#默认状态码 302 临时重定向</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/hi'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h4 id="生成错误响应">生成错误响应 </h4>
+<blockquote>
+<p>大多数情况下，flask会自动处理常见的错误响应。如果你想手动返回错误响应，更方便的方法是使用flask提供的<strong>abort</strong>函数。</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> flask <span class="token keyword keyword-import">import</span> abort
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/coffee'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">brew_coffee</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    abort<span class="token punctuation">(</span><span class="token number">418</span><span class="token punctuation">)</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/answer'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">answer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    abort<span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">,</span>description<span class="token operator">=</span><span class="token string">'There is no answer.'</span><span class="token punctuation">)</span>
+</code></pre><div style="background-color: rgb(223, 236, 251); padding: 5px; border-left: 5px solid rgb(68, 149, 248); border-radius: 5px;">
+  <strong>😜小知识</strong>
+  <p>418错误响应由ietf（互联网工程任务组）在1998年愚人节发布的htcpcp(hyper text coffee pot control protocol）中定义，当一个控制茶壶的htcpcp收到煮咖啡的指令时应当回传此错误响应。</p>
+</div>
+<h4 id="设置响应格式">设置响应格式 </h4>
+<blockquote>
+<p>MIME类型是一种用来表示文件类型的标准，它与文件拓展名相对应，可以让客户端区分不同的内容类型，并执行不同的操作。一般的格式为“类型名/子类型名”，其中子类型名一般为文件拓展名，如png图片：image/png。</p>
+</blockquote>
+<p><strong>常用数据格式</strong></p>
+<ul>
+<li>纯文本：text/plain</li>
+<li>html：text/html</li>
+<li>xml：application/xml</li>
+<li>json：application/json</li>
+</ul>
+<p>设置mime类型</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/foo'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> make_response<span class="token punctuation">(</span><span class="token string">'hello,world!'</span><span class="token punctuation">)</span>
+    response<span class="token punctuation">.</span>mimetype <span class="token operator">=</span> <span class="token string">'text/plain'</span>
+    <span class="token comment">#或 response.headers['Content-Type'] = 'text/xml;charset=utf-8'</span>
+    <span class="token keyword keyword-return">return</span> response
+</code></pre><p>jsonify()函数</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'progress'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">get_progress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'date'</span><span class="token punctuation">:</span><span class="token string">'2021/9/14'</span><span class="token punctuation">,</span><span class="token string">'progress'</span><span class="token punctuation">:</span><span class="token string">"20%"</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-return">return</span> jsonify<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token comment">#对于字典或列表类型，可以直接在视图函数的最后返回。flask检测到会自动调用jsonify()函数</span>
+    <span class="token comment">#jsonify()函数默认生成200响应</span>
+</code></pre><h3 id="session与cookie">session与cookie </h3>
+<blockquote>
+<p>http是无状态协议，即是在一次响应结束后，服务器不会保留任何关于客户端状态的信息。而对于某些web程序来说，客户的某些信息必须备记住，例如用户的登录状态，以便根据用户的不同状态返回不同的响应。为了解决这类问题，引入了cookie技术。</p>
+</blockquote>
+<h4 id="set_cookie">set_cookie() </h4>
+<p>方法支持的参数</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>无</td>
+<td>cookie的键</td>
+</tr>
+<tr>
+<td>value</td>
+<td>""</td>
+<td>cookie的值</td>
+</tr>
+<tr>
+<td>max_age</td>
+<td>None</td>
+<td>cookie被保存的时间，单位为秒</td>
+</tr>
+<tr>
+<td>expires</td>
+<td>None</td>
+<td>具体的过期时间，一个date对象或者unix时间戳</td>
+</tr>
+<tr>
+<td>path</td>
+<td>"/"</td>
+<td>设置cookie只在给定的路径可用，默认为整个域名</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>None</td>
+<td>设置cookie可用的域名，默认进设置它的域名可以读取它</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>False</td>
+<td>True时，只有https才可以访问</td>
+</tr>
+<tr>
+<td>httponly</td>
+<td>False</td>
+<td>True时，禁止客户端js获取cookie</td>
+</tr>
+<tr>
+<td>samsite</td>
+<td>None</td>
+<td>设置cookie是否尽在第一方或同一站点上下文传输避免跨站请求攻击</td>
+</tr>
+</tbody>
+</table>
+<p>设置cookie</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/set/&lt;name&gt;'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">set_name</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> make_response<span class="token punctuation">(</span>redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    response<span class="token punctuation">.</span>set_cookie<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> response
+<span class="token comment">#浏览器开发者模式进行验证</span>
+</code></pre><blockquote>
+<p>当浏览器保存了服务器端设置的cookie后，当它再次向服务器端发送请求时，请求回自动携带已设置的cookie信息（请求首部的Cookie字段）。</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/cookies'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">get_cookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> request<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'human'</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-interpolation"><span class="token string">f'&lt;h1&gt;cookie,</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!&lt;/h1&gt;'</span></span>
+</code></pre><div style="background-color: rgb(251, 251, 223); padding: 5px; border-left: 5px solid rgb(251, 236, 99); border-radius: 5px;">
+  <strong>⚠️注意</strong>
+  <p> Cookie只能存储在客户端且数据不安全、容量小，在浏览器中手动添加和修改cookie是很容易的。如果直接将认证信息以铭文方式存储在cookie中，恶意用户可能通过伪造cookie的内容获取网络权限。因此，我们需要对cookie内容进行签名加密。</p>
+</div>
+<h4 id="session">session </h4>
+<blockquote>
+<p>flask提供了一个session对象，它会创建一个cookie并自动对存入的内容进行签名处理。并且把信息储存在服务器中，cookie只储存session id，而且session的默认在浏览器关闭时删除。</p>
+</blockquote>
+<p>小案例：利用session模仿用户认证</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> os
+<span class="token comment">#设置密钥</span>
+app<span class="token punctuation">.</span>secret_key <span class="token operator">=</span> <span class="token string">'secret'</span>
+<span class="token comment">#或</span>
+<span class="token comment">#app.secret_key = os.getenv('SECRET_KEY',default='your secret key') #写入环境变量</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+   session<span class="token punctuation">[</span><span class="token string">'logged_in'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+   <span class="token keyword keyword-return">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/home'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">home</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword keyword-if">if</span> <span class="token string">'logged_in'</span> <span class="token keyword keyword-in">in</span> session<span class="token punctuation">:</span>
+       response <span class="token operator">=</span><span class="token string">"welcome home page!"</span>
+   <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+       response <span class="token operator">=</span> <span class="token string">"please login first."</span>
+   <span class="token keyword keyword-return">return</span> response
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/logout'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword keyword-if">if</span> <span class="token string">'logged_in'</span> <span class="token keyword keyword-in">in</span> session<span class="token punctuation">:</span>
+       session<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'logged_in'</span><span class="token punctuation">)</span>
+   <span class="token keyword keyword-return">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h2 id="flask上下文">flask上下文 </h2>
+<blockquote>
+<p>我们可以将变成中的上下文理解为当前环境的快照。Flask中主要有两种上下文：程序上下文和请求上下文。程序上下文，存储了程序运行所需的信息，而请求上下文包含了请求的各种信息。</p>
+</blockquote>
+<h3 id="上下文全局变量">上下文全局变量 </h3>
+<blockquote>
+<p>在前面我们通过从flask导入了一个全局的request对象，然后在视图函数里调用了request属性来获取数据。<br>
+<strong>为什么request会自动包含对应请求的数据呢？</strong><br>
+因为request是一个代理对象，flask会在每个请求产生后自动将它指向包含当前请求信息的request对象——激活（push）请求上下文，结束后，flask会重置（pop）对应的请求上下文。<br>
+注：request的仅在自己的线程或运行单元内为"全局"的。</p>
+</blockquote>
+<p>flask提供的上下文变量</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>上下文类别</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current_app</td>
+<td>程序上下文</td>
+<td>指向请求的当前实例程序.</td>
+</tr>
+<tr>
+<td>g</td>
+<td>程序上下文</td>
+<td>替代python的全局变量，确保仅在当前请求中可用。用于存储全局数据，每次请求都会重设。</td>
+</tr>
+<tr>
+<td>request</td>
+<td>请求上下文</td>
+<td>封装客户端发出的请求报文数据。</td>
+</tr>
+<tr>
+<td>session</td>
+<td>请求上下文</td>
+<td>用于记住请求之间的数据，通过签名的cookie实现。</td>
+</tr>
+</tbody>
+</table>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> flask <span class="token keyword keyword-import">import</span> g
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>before_request</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    g<span class="token punctuation">.</span>name <span class="token operator">=</span> request<span class="token punctuation">.</span>args<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span>
+<span class="token comment">#我们可以在其他视图函数中直接使用g.name获取对应的值了。</span>
+</code></pre><h3 id="推送上下文">推送上下文 </h3>
+<blockquote>
+<p>在以下情况下，flask会自动推送（激活）<strong>程序</strong>上下文：</p>
+<ul>
+<li>利用flask run/app.run（）命令启动程序</li>
+<li>执行@app.cli.command()装饰器注册的flask命令时</li>
+<li>使用flask shell 命令启动 python shell时</li>
+</ul>
+<p>当请求进入时，flask会自动激活请求上下文，同时程序上下文也被自动激活。即，在处理请求时，这两者拥有相同的生命周期。</p>
+</blockquote>
+<h4 id="手动激活上下文">手动激活上下文 </h4>
+<blockquote>
+<p>同样依赖上下文的还有url_for()、jsonify()等函数，因此你只能在视图函数或仅在视图函数内调用的函数中使用它们。</p>
+</blockquote>
+<p>手动激活上下文<br>
+<code>with app.app_context():</code> 或 <code>app.app_context().push()</code></p>
+<h3 id="上下文钩子">上下文钩子 </h3>
+<p>@app.teardown_appcontext</p>
+<h2 id="web安全防范">web安全防范 </h2>
+<h3 id="注入攻击">注入攻击 </h3>
+<h3 id="xss攻击">xss攻击 </h3>
+<h3 id="csrf攻击">csrf攻击 </h3>
+<h2 id="小实践重定向到上一个页面">小实践：重定向到上一个页面 </h2>
+<ol>
+<li>
+<p>获取上一个页面的url</p>
+</li>
+<li>
+<p>对url进行安全验证</p>
+</li>
+</ol>
+<h1 id="3-模版与静态文件">3 模版与静态文件 </h1>
+<h1 id="附录1pdm常用指令">附录1：pdm常用指令 </h1>
+<p>安装依赖</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>$pdm add foo==1.2.0 #安装并且制定版本
+$pdm add --dev pytest #标记为开发依赖
+</code></pre><p>利用pdm.lock在新环境安装依赖</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>$pdm install
+</code></pre><p>更新依赖</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>$pdm update
+$pdm update --dev
+$pdm update flask
+</code></pre><p>移除依赖<br>
+<code>$pdm remove flask</code></p>
+<p>查看依赖列表<br>
+<code>$pdm list</code></p>
+<p>查看虚拟环境列表<br>
+<code>$pdm venv list</code></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
