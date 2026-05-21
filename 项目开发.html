@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>综合项目开发指南 | Scrum + Gitee 敏捷协作 · 四周冲刺细化</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0b5e7e, #1e88e5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .subhead {
+            color: #2c6e9e;
+            border-left: 4px solid #1e88e5;
+            padding-left: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 1.1rem;
+        }
+        .badge {
+            background: #eef2ff;
+            color: #1e40af;
+            border-radius: 100px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.8rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 3px solid #dceef5;
+            padding-bottom: 0.5rem;
+        }
+        h2 i {
+            color: #1e88e5;
+            font-size: 1.6rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.2rem 0 0.5rem;
+            color: #0f3b5c;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e9f0f5;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+        }
+        .card-icon {
+            font-size: 2.2rem;
+            color: #2c7da0;
+            margin-bottom: 1rem;
+        }
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: #cbdde6;
+            z-index: 0;
+        }
+        .timeline-item {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            background: white;
+            margin: 0 0.5rem;
+            padding: 1rem 0.5rem;
+            border-radius: 1rem;
+        }
+        .timeline-badge {
+            width: 45px;
+            height: 45px;
+            background: #1e88e5;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .timeline-item h4 {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .timeline-desc {
+            font-size: 0.8rem;
+            color: #4b6a7c;
+        }
+        .steps {
+            background: #f8fafc;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            margin: 1rem 0;
+        }
+        .step-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+        .step-num {
+            width: 28px;
+            height: 28px;
+            background: #d4e6f1;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0f5b8c;
+        }
+        .code-block {
+            background: #1e2a36;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-family: monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 0.6rem;
+            text-align: left;
+        }
+        th {
+            background: #eef2ff;
+        }
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            color: #5f7f9a;
+            border-top: 1px solid #e2edf2;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 760px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .timeline {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .timeline::before {
+                display: none;
+            }
+            .timeline-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                text-align: left;
+                background: #f9fbfd;
+                margin-bottom: 0.5rem;
+            }
+            .timeline-badge {
+                margin-bottom: 0;
+            }
+        }
+        .week12-list {
+            background: #eaf5f0;
+            padding: 1.2rem 1.5rem;
+            border-radius: 1.2rem;
+            margin: 1rem 0 2rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div>
+            <h1><i class="fas fa-rocket"></i> 综合项目开发指南</h1>
+            <div class="subhead">Scrum + Git/Gitee 敏捷协作 · 四周冲刺实战</div>
+        </div>
+        <div>
+            <span class="badge"><i class="fas fa-users"></i> 团队协作</span>
+            <span class="badge"><i class="fas fa-chalkboard-user"></i> 模拟甲方</span>
+        </div>
+    </div>
+
+    <!-- ================= 一、Scrum 核心 ================= -->
+    <h2><i class="fas fa-recycle"></i> Scrum / Sprint 开发周期</h2>
+    <!-- 插入用户提供的 Scrum 流程图 -->
+    <div style="text-align: center; margin: 1rem 0 1rem 0;">
+        <img src="https://cdn.prod.website-files.com/66d6b5efabcac22913f8211b/66d7f262fbf36c0e5488ef2d_1a7cd8df0b958931812d448140d007ec0ef2f548-620x413.jpeg" alt="Scrum 流程示意图" style="max-width:100%; border-radius: 1rem; box-shadow: 0 8px 16px rgba(0,0,0,0.05);">
+    </div>
+    <div class="card-grid">
+        <div class="card"><div class="card-icon"><i class="fas fa-user-tie"></i></div><h3>三大角色</h3><p>产品负责人（定优先级） · Scrum Master（保流程） · 开发团队（交付增量）</p></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-list-check"></i></div><h3>三大工件</h3><p>产品待办列表 · Sprint待办列表 · 产品增量</p></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-calendar-week"></i></div><h3>核心事件</h3><p>Sprint计划会 · 每日站会 · 评审会 · 回顾会</p></div>
+    </div>
+
+    <div class="steps">
+        <div class="step-item"><div class="step-num">①</div><div><strong>Scrum Master 职责</strong> – 护航流程、排除障碍、推动自组织、促进沟通、引导回顾</div></div>
+    </div>
+
+    <!-- ================= 二、用户故事 & 故事点 ================= -->
+    <h2><i class="fas fa-book-open"></i> 用户故事 & 故事点估算</h2>
+    <div class="card-grid">
+        <div class="card">
+            <i class="fas fa-comment-dots card-icon"></i>
+            <h3>标准格式</h3>
+            <p>“作为 &lt;角色&gt;，我想要 &lt;活动&gt;，以便于 &lt;价值&gt;”</p>
+            <p class="badge">例：作为已注册用户，我希望重置密码，以便找回账号</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-chart-line card-icon"></i>
+            <h3>INVEST 原则</h3>
+            <p>独立·可协商·有价值·可估算·小而可测</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-calculator card-icon"></i>
+            <h3>故事点参考（斐波那契）</h3>
+            <p>1(极简) / 2(简单) / 3(中等) / 5(复杂) / 8(极复杂)<br>例：重置密码 ≈ 5点</p>
+        </div>
+    </div>
+
+    <!-- ================= 三、Gitee 协作流程 ================= -->
+    <h2><i class="fab fa-git-alt"></i> Gitee 功能分支协作流程</h2>
+    <div class="steps">
+        <div class="step-item"><div class="step-num">1</div><div><strong>创建分支</strong>：<code>git checkout -b feature/xxx</code> (基于最新 master)</div></div>
+        <div class="step-item"><div class="step-num">2</div><div><strong>日常提交前拉取</strong>：<code>git pull origin feature/xxx</code> 避免冲突</div></div>
+        <div class="step-item"><div class="step-num">3</div><div><strong>推送 & 发起 PR</strong> → Gitee 新建 Pull Request，指定审查者</div></div>
+        <div class="step-item"><div class="step-num">4</div><div><strong>审查 → 修改 → 合并</strong> (管理员合并后删除分支)</div></div>
+        <div class="step-item"><div class="step-num">5</div><div><strong>保护分支</strong>：master 设为“禁止直接推送”，强制 PR 流程</div></div>
+    </div>
+    <div class="code-block">
+        # 核心命令速记<br>
+        git checkout master && git pull<br>
+        git checkout -b feature/login<br>
+        git add . && git commit -m "feat: login"<br>
+        git push origin feature/login<br>
+        # Gitee 网页 → 创建 Pull Request
+    </div>
+
+    <!-- ================= 四、项目管理看板 & 里程碑 ================= -->
+    <h2><i class="fas fa-tasks"></i> 项目管理：看板 + 里程碑</h2>
+    <div class="card-grid">
+        <div class="card"><i class="fas fa-chalkboard card-icon"></i><h3>任务看板 (Kanban)</h3><p>状态列：待处理 / 进行中 / 已完成<br>拖拽更新，每日站会同步进度，透明化冲刺进展。</p></div>
+        <div class="card"><i class="fas fa-flag-checkered card-icon"></i><h3>里程碑 (Milestone)</h3><p>每个 Sprint 创建一个里程碑，将关联的Issue/任务移入里程碑，追踪迭代完成度。<br>Sprint结束及时关闭里程碑。</p></div>
+    </div>
+
+    <!-- 四周时间线 -->
+    <h2><i class="fas fa-calendar-alt"></i> 四周冲刺时间线</h2>
+    <div class="timeline">
+        <div class="timeline-item"><div class="timeline-badge">W1</div><h4>第12周 · 启动周</h4><div class="timeline-desc">Scrum培训 · 用户故事拆分 · 搭建框架 · 创建Sprint1看板+里程碑</div><div class="badge">✅ 仓库+Backlog</div></div>
+        <div class="timeline-item"><div class="timeline-badge">W2</div><h4>第13周 · 迭代1</h4><div class="timeline-desc">开发核心功能 · 每日站会 · Sprint1评审+回顾 · 计划Sprint2</div><div class="badge">🎯 功能演示1</div></div>
+        <div class="timeline-item"><div class="timeline-badge">W3</div><h4>第14周 · 迭代2</h4><div class="timeline-desc">完善功能 / 高级特性集成 · 测试 · 冻结代码</div><div class="badge">📄 文档+演示初稿</div></div>
+        <div class="timeline-item"><div class="timeline-badge">W4</div><h4>第15周 · 交付</h4><div class="timeline-desc">最终演示+答辩 · 提交视频/仓库/实验报告</div><div class="badge">🏆 项目结项</div></div>
+    </div>
+    <!-- 周次检验表 -->
+    <table>
+        <thead><tr><th>周次</th><th>课堂重点</th><th>课后检验内容</th></tr></thead>
+        <tbody>
+            <tr><td>第12周</td><td>Scrum,用户故事,估算,Gitee协作,看板/里程碑</td><td>仓库链接、Product Backlog、Sprint1 Backlog、看板截图、里程碑创建</td></tr>
+            <tr><td>第13周</td><td>站会,开发,Review+Retrospective, Sprint2规划</td><td>Sprint1完成代码(合并)、看板更新、里程碑进度、Sprint2 Backlog</td></tr>
+            <tr><td>第14周</td><td>高级特性指导,第二次评审,代码冻结</td><td>Sprint2功能、README草稿、演示视频初稿</td></tr>
+            <tr><td>第15周</td><td>最终演示答辩</td><td>完整代码仓库、演示视频终版、说明文档、个人实验报告</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ================= 评分系统（已替换为新的个人得分计算模型） ================= -->
+    <h2><i class="fas fa-star-of-life"></i> 评分系统</h2>
+    <div class="card-grid">
+        <div class="card"><i class="fas fa-laptop-code"></i><h3>小组作品得分 40%</h3><p>功能完整性14′ · 代码质量10′ · 数据库设计6′ · 前端体验6′ · 演示4′</p></div>
+        <div class="card"><i class="fas fa-handshake"></i><h3>甲方满意度 20%</h3><p>需求匹配度10′ · 用户体验5′ · 创新/附加功能5′</p></div>
+        <div class="card"><i class="fas fa-chart-simple"></i><h3>每周总结得分 15%</h3><p>共4周，每周3.75分（看板/Backlog/Review/回顾材料）</p></div>
+        <div class="card"><i class="fas fa-user-check"></i><h3>个人得分</h3>
+            <p>✅ 小组公共基础分 = 作品40 + 甲方20 + 每周总结15 = <strong>75分</strong>。<br>
+            ✅ 个人贡献系数 = 教师评分(30%) + 小组互评(70%)加权归一化，系数范围0.7~1.3。<br>
+            ✅ <strong>个人最终得分 = 小组公共基础分 × 个人贡献系数</strong>。<br>
+            📌 多劳多得，防止“搭便车”。</p>
+        </div>
+    </div>
+    <p><strong>个人最终得分 = 小组公共基础分 × 个人贡献系数</strong> （教师30% + 小组互评70% → 归一化系数）</p>
+
+    <!-- ================= 交付材料清单 ================= -->
+    <h2><i class="fas fa-folder-open"></i> 实验结束提交材料</h2>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0;">
+        <div style="flex:1; background:#f0f6fa; border-radius: 1rem; padding: 1.2rem;">
+            <i class="fas fa-user-graduate"></i> <strong>个人提交</strong><br>
+            • 实验报告（三个Sprint安排截图 + 个人代码&功能页面截图 + 每次会议反思总结）
+        </div>
+        <div style="flex:1; background:#eaf4e8; border-radius: 1rem; padding: 1.2rem;">
+            <i class="fas fa-users"></i> <strong>小组提交</strong><br>
+            • 演示视频 (5-8分钟)<br>
+            • Gitee仓库链接（公开/添加教师协作）<br>
+            • 项目说明文档 README.md（简介/安装运行/团队分工）
+        </div>
+    </div>
+
+    <!-- ================= 第12周具体任务清单 ================= -->
+    <div class="week12-list">
+        <h3 style="margin-top: 0; color: #0f5b8c;"><i class="fas fa-calendar-week"></i> 第12周具体任务（下课前必须完成）</h3>
+        <ul style="margin-left: 1.2rem;">
+            <li><strong>1. 创建 Gitee 账号</strong> — 每位同学注册 Gitee 账号，完善个人信息（用户名、邮箱）。</li>
+            <li><strong>2. 组长创建仓库并邀请成员</strong> — 组长新建私有仓库，在「管理」→「仓库成员管理」中邀请组员（角色：开发者）和教师（角色：报告者）。</li>
+            <li><strong>3. 用户故事 + 优先级排序</strong> — 编写条用户故事，使用 P0/P1/P2 标记优先级（P0最高），形成 Product Backlog，并在仓库的 Issue 或看板中记录。</li>
+            <li><strong>4. 完成里程碑 & Sprint 1 看板设置</strong> — 创建里程碑「Sprint 1」，截止日期为第13周开始前；看板设置三列（待处理/进行中/已完成），将 Sprint 1 任务卡片拖入“待处理”。</li>
+            <li><strong>5. 基础框架代码提交</strong> — 初始化 Flask 项目（包结构、工厂函数、蓝本、基础模型），推送到仓库 main 分支。</li>
+        </ul>
+    </div>
+</div>
+    <footer>
+        <i class="fas-regular fa-message"></i> 每日站会 · 及时同步 · 主动代码审查 · 保证迭代质量 <br>
+        © 综合项目指导 | 基于 Scrum + Gitee 团队协作 | 四周冲刺，打造卓越产品
+    </footer>
+</body>
+</html>
